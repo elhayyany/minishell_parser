@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 15:09:49 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/05/27 10:56:36 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/09 15:36:49 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,16 +106,16 @@ void	open_input(t_cmd *pipe)
 	i = 0;
 	if (!pipe->filesin)
 		return ;
-	pipe->outputs = malloc(strsnums(pipe->filesin) * sizeof(int));
+	pipe->inputs = malloc(strsnums(pipe->filesin) * sizeof(int));
 	while (pipe->filesin[i])
 	{
-		pipe->outputs[i] = open(pipe->filesin[i], O_RDWR,0642);
-		if (pipe->outputs[i] == -1)
+		pipe->inputs[i] = open(pipe->filesin[i], O_RDWR,0642);
+		if (pipe->inputs[i] == -1)
 		{
 			pipe->A[0] = -1;
 			printf("monosholo: %s:permission denied or file doesnt exitst\n", pipe->filesin[i]);
 			while (i++ > 0)
-				close (pipe->outputs[i]);
+				close (pipe->inputs[i]);
 			break ;
 		}
 		i++;

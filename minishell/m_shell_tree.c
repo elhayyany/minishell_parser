@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 13:33:33 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/05/26 11:42:39 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/05 14:38:36 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -319,7 +319,7 @@ t_prior*    m_shell_parser(char *line, char *** operators)
 	char    **slices;
 	t_prior *script;
 	int     i;
-
+	// split them by operators
 	slices = ft_split_pro(line, operators);
 	script = malloc(sizeof(t_prior));
 	check_malloc(script, 0, 1);
