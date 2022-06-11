@@ -6,18 +6,22 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 09:50:09 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/06/03 17:57:05 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:39:44 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "executor/minishell.h"
 
+// void	po(t_prior *script)
+// {
+// 	//int	i = script->numofchilds;
+// }
+
 int main(int ac, char **av, char **env)
 {
 	char     *line;
 	t_prior  *script;
-	char		**operators;
 
 	line = 0;
 	(void)ac;
@@ -45,11 +49,11 @@ int main(int ac, char **av, char **env)
 		   free(line);
 		   continue ;
 		}
-		script = m_shell_parser(line, &operators);
+		script = m_shell_parser(line);
 		tree_parser(script, env);
-		free_tree(script);
+		//po(script);
+		//free_tree(script);
 		free(script);
 		free (line);
    }
 }
-

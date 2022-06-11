@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 09:49:57 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/05/26 17:52:41 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:38:52 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -335,7 +335,7 @@ char	**remove_quotes(char **str, t_cmd *pipe, int f)
 		i++;
 	}
 	new_str[i] = 0;
-	free_db_str(str);
+	free(str);
 	return (new_str);
 }
 

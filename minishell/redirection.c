@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:02:03 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/05/26 11:28:00 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:34:42 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	get_file_name(t_cmd *pipe, int i, char **word)
 
 	k = 0;
 	j = word_length(pipe, i);
-	(*word) = malloc(sizeof(char) * j);
+	(*word) = malloc(sizeof(char) * j + 1);
 	while (k < j)
 	{
 		(*word)[k] = pipe->line[i];

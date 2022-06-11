@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 15:09:49 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/06/09 15:36:49 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:43:05 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ void	open_output(t_cmd *pipe)
 	i = 0;
 	if (!pipe->filesout)
 		return ;
-	pipe->A = malloc(sizeof(int));
 	pipe->outputs = malloc(strsnums(pipe->filesout) * sizeof(int));
 	while (pipe->filesout[i])
 	{
@@ -167,6 +166,7 @@ void	read_write(t_cmd *pipe)
 
 void	files_open(t_cmd *pipe)
 {
+	pipe->A = malloc(sizeof(int));
 	open_her_doc(pipe);
 	open_output(pipe);
 	open_input(pipe);

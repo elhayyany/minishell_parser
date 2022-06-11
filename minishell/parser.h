@@ -6,7 +6,7 @@
 /*   By: ael-hayy <ael-hayy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:37:45 by ael-hayy          #+#    #+#             */
-/*   Updated: 2022/05/26 17:54:24 by ael-hayy         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:39:23 by ael-hayy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ typedef struct priorities
 }	t_prior;
 
 int			pre_check_line(char *line);
-t_prior*	m_shell_parser(char *line, char *** operators);
+t_prior*	m_shell_parser(char *line);
 void		check_malloc (void *ptr, void **ptro, int i);
 int			calulate_cmds(char *line);
 int			strsnums(char	**slices);
